@@ -12,14 +12,6 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
-        <script>
-         window.onload = function() {    
-             twemoji.parse(document.body, 
-                     {folder: 'svg', ext: '.svg'}
-             );
-
-         }
-        </script>
         <title>Alakazam Web - Coming Soon</title>
     </head>
     <body>
@@ -28,4 +20,32 @@
             <p>Shatter boundaries and surf beyond 🏄🏼‍♂️</p>
         </div>
     </body>
+    <script>
+		function constructTwemojiURL(icon, options) {
+			return ''.concat(
+				options.base, 
+				options.size, 
+				'/',
+				icon,         
+				options.ext   
+			);
+		}
+		
+		const emoji = "📮"
+		twemoji.parse(emoji, {
+			callback: (icon, options) => {
+		        
+				// create the image tag
+				const img = document.createElement('img');
+		
+				// assign the image source
+				img.src = constructTwemojiURL(icon, options)        
+				img.alt = "Twemoji"
+		
+				// append the tag to our document body
+				document.body.append(img)
+		
+			}
+		})
+    </script>
 </html>
