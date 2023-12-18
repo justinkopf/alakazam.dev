@@ -80,5 +80,9 @@ img.emoji {
     </body>
     <script>
         twemoji.parse(document.body);
+        twemoji.parse(genericNode, {
+            folder: 'svg',
+            ext: '.svg'
+        });
     </script>
 </html>
