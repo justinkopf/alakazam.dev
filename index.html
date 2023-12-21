@@ -10,62 +10,86 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+        <script>document.addEventListener("touchstart", function(){}, true);</script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+            body {
+  background: #00091B;
+  color: #fff;
+}
 
-body {
-    background: #00091B;
-    color: #fff;
-}
-  
-  
+
 @keyframes fadeIn {
-    from {top: 20%; opacity: 0;}
-    to {top: 100; opacity: 1;}
-    
-}
+  from {top: 20%; opacity: 0;}
+  to {top: 100; opacity: 1;}
   
+}
+
 @-webkit-keyframes fadeIn {
-    from {top: 20%; opacity: 0;}
-    to {top: 100; opacity: 1;}
-    
-}
+  from {top: 20%; opacity: 0;}
+  to {top: 100; opacity: 1;}
   
+}
+
 .wrapper {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    animation: fadeIn 1000ms ease;
-    -webkit-animation: fadeIn 1000ms ease;
-    
-}
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  animation: fadeIn 1000ms ease;
+  -webkit-animation: fadeIn 1000ms ease;
   
+}
+
 h1 {
-    font-size: 50px;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 0;
-    line-height: 1;
-    font-weight: 700;
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 700;
 }
-  
+
 .dot {
-    color: #4FEBFE;
+  color: #4FEBFE;
 }
-  
+
 p {
-    text-align: center;
-    margin: 18px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-    
+  text-align: center;
+  margin: 18px;
+  font-family: 'Muli', sans-serif;
+  font-weight: normal;
+  
 }
-img.emoji {
-   height: 1em;
-   width: 1em;
-   margin: 0 .05em 0 .1em;
-   vertical-align: -0.1em;
+
+.icons {
+  text-align: center;
+  
+}
+
+.icons i {
+  color: #00091B;
+  background: #fff;
+  height: 15px;
+  width: 15px;
+  padding: 13px;
+  margin: 0 10px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 200ms ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.icons i:hover, .icons i:active {
+  color: #fff;
+  background: none;
+  cursor: pointer !important;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  text-decoration: none;
+  
 }
         </style>
         <title>Alakazam Web - Coming Soon</title>
@@ -74,6 +98,11 @@ img.emoji {
         <div class="wrapper">
             <h1>coming soon<span class="dot">.</span></h1>
             <p>Shatter boundaries and surf beyond 🏄🏼‍♂️</p>
+            <div class="icons">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-youtube-play"></i></a>
+                <a href=""><i class="fa fa-paper-plane"></i></a>
+            </div>
         </div>
     </body>
     <script>
